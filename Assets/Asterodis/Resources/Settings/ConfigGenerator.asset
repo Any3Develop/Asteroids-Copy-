@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a9e0d805ad4a4d9b657aca00015219, type: 3}
+  m_Name: ConfigGenerator
+  m_EditorClassIdentifier: 
+  gameSettings:
+    FriendlyFire: 0
+    ScoreMultiplier: 0.5
+    DelayLevelTimer: 1.5
+    SceneDepth: 0
+    Scores:
+    - Tag: Asteroid_0
+      Quantity: 10
+    - Tag: Asteroid_1
+      Quantity: 50
+    - Tag: Asteroid_2
+      Quantity: 100
+    - Tag: PlayerAi_0
+      Quantity: 200
+    - Tag: PlayerAi_1
+      Quantity: 300
+  audioSetting:
+    Volume: 0.25
+    Mute: 0
+    BitLevelTime: 150
+    BitTempMax: 0.7
+    Pressets:
+    - AudioName: fire1
+      ScaleVolume: 0.25
+    - AudioName: saucerBig
+      ScaleVolume: 0.15
+    - AudioName: saucerSmall
+      ScaleVolume: 0.15
+    - AudioName: thrust
+      ScaleVolume: 0.25
+  portalSetting:
+    ErrorOffset: 0.25
+    EdgeRadius: 0.75
+  playerSetting:
+    Health: 2
+    RespawnTime: 1
+  playerMovementSetting:
+    AccelerationMovementMax: 0.012
+    AccelerationMovementFactor: 0.01
+    DecelerationMovementFactor: 1
+    AccelerationRotationFactor: 200
+    DecelerationRotationFactor: 20
+  playerUniverseSetting:
+    DifficultFactor: 1.5
+    InitAttackCount: 6
+  playerAiSetting:
+    AIEnvironmentCollision: 0
+    Health: 1
+    VariationsCount: 2
+    PerLevelAppearances: 2
+    SpawnPointCount: 10
+    AimRotationSpeed: 5
+  playerAiMovementSetting:
+    ManeuverCountMin: 2
+    ManeuverCountMax: 3
+    ReachDistance: 0.1
+    Variations:
+    - LinearSpeed: 1.5
+    - LinearSpeed: 1.8
+  asteroidWeaponSetting:
+    FriendlyCollision: 0
+    ProjectileSize: 1
+    ProjectileSpeed: 1.5
+    AttackSpeed: 0
+    Range: 0
+    Damage: 1
+    ShardsSpeedMultiplier: 0.15
+    ShardsSteps: 3
+    DevideFactor: 2
+  laserWeaponSetting:
+    FriendlyCollision: 0
+    ProjectileSize: 0.25
+    ProjectileSpeed: 20
+    AttackSpeed: 0.4
+    Range: 10
+    Damage: 1
+    MaxAmmo: 2
+    CountDown: 10
+  gunWeaponSetting:
+    FriendlyCollision: 0
+    ProjectileSize: 0.1
+    ProjectileSpeed: 15
+    AttackSpeed: 0.15
+    Range: 10
+    Damage: 1
+  collisionWeaponSetting:
+    FriendlyCollision: 0
+    Damage: 1
