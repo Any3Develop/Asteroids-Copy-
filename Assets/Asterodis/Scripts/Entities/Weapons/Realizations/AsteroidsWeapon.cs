@@ -35,6 +35,13 @@ namespace Asterodis.Entities.Weapons
             currentTask?.Dispose();
             currentTask = null;
         }
+        
+        protected override void OnReleased()
+        {
+            base.OnReleased();
+            currentTask?.Dispose();
+            currentTask = null;
+        }
 
         public override bool CanAttack(params object[] args)
         {

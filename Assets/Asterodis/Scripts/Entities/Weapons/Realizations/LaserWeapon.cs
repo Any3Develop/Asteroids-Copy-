@@ -61,6 +61,17 @@ namespace Asterodis.Entities.Weapons
             countDown = currentAmmo = 0;
         }
 
+        protected override void OnReleased()
+        {
+            base.OnReleased();
+            statisticEntities.ForEach(x=>
+            {
+                statisticStorage.Remove(x);
+                x?.Dispose();
+            });
+            statisticEntities.Clear();
+        }
+
         private async Task CountDownLaserAmmoAsync(CancellationToken token)
         {
             var laserCountDownStatistic = AbstractFactory.Create<StatisticEntity>(Id);

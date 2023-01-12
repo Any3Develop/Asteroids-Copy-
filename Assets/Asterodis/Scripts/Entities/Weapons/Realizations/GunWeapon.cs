@@ -28,16 +28,16 @@ namespace Asterodis.Entities.Weapons
             weaponStatistic = gunStatistic;
             statisticStorage.Add(gunStatistic);
         }
-
-        protected override void OnDisposed()
+        
+        protected override void OnReleased()
         {
-            base.OnDisposed();
-            if (weaponStatistic != null)
-            {
-                statisticStorage.Remove(weaponStatistic);
-                weaponStatistic?.Dispose();
-                weaponStatistic = null;
-            }
+            base.OnReleased();
+            if (weaponStatistic == null) 
+                return;
+            
+            statisticStorage.Remove(weaponStatistic);
+            weaponStatistic?.Dispose();
+            weaponStatistic = null;
         }
 
         protected override IProjectileSceneEntity CreateProjectileSceneEntity(params object[] args)
