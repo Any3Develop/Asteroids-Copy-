@@ -49,8 +49,8 @@ MonoBehaviour:
     Health: 2
     RespawnTime: 1
   playerMovementSetting:
-    AccelerationMovementMax: 0.012
-    AccelerationMovementFactor: 0.01
+    AccelerationMovementMax: 0.017
+    AccelerationMovementFactor: 0.015
     DecelerationMovementFactor: 1
     AccelerationRotationFactor: 200
     DecelerationRotationFactor: 20
